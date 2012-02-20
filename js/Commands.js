@@ -22,6 +22,10 @@ config.commands.closeOthers.handler = function(event,src,title)
 config.commands.editTiddler.handler = function(event,src,title)
 {
 	clearMessage();
+
+	// var tiddler  =  store.getTiddler( title );
+	// if ( tiddler.isReadOnly( ) ) return;
+	
 	var tiddlerElem = story.getTiddler(title);
 	var fields = tiddlerElem.getAttribute("tiddlyFields");
 	story.displayTiddler(null,title,DEFAULT_EDIT_TEMPLATE,false,null,fields);
